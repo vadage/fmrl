@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import { Input } from '$lib/components/ui/input';
 	import { Label } from '$lib/components/ui/label';
 	import * as Select from '$lib/components/ui/select';
 	import { Textarea } from '$lib/components/ui/textarea';
@@ -9,8 +8,6 @@
 	import {
 		Lock,
 		Clock,
-		EyeIcon,
-		EyeOffIcon,
 		LoaderCircleIcon,
 		CircleAlertIcon
 	} from '@lucide/svelte';
@@ -18,13 +15,13 @@
 	import PasswordStrength from '$lib/components/PasswordStrength.svelte';
 	import { maxMessageLength } from '$lib/shared';
 	import type { ShareableMessage } from '$lib/message.remote';
+	import PasswordInput from '$lib/components/PasswordInput.svelte';
 
 	let { shareableMessage = $bindable(null) }: { shareableMessage: ShareableMessage } = $props();
 
 	let message = $state('');
 	let ttl = $state('86400');
 	let password = $state('');
-	let showPassword = $state(false);
 	let linkGeneration = $state<Promise<ShareableMessage>>(null);
 
 	const maxCharacters = maxMessageLength;
@@ -112,30 +109,14 @@
 				<Lock class="h-3 w-3" />
 				Password (Optional)
 			</Label>
-			<div class="relative">
-				<Input
-					id="password"
-					type={showPassword ? 'text' : 'password'}
-					bind:value={password}
-					placeholder="Enter optional password"
-					class="w-full pr-10"
-					name="password"
-					autocomplete="off"
-				/>
-				<button
-					type="button"
-					onclick={() => (showPassword = !showPassword)}
-					class="absolute inset-y-0 right-0 flex items-center pr-3 text-muted-foreground hover:text-foreground"
-					aria-label={showPassword ? 'Hide Password' : 'Show Password'}
-					aria-pressed={showPassword}
-				>
-					{#if showPassword}
-						<EyeOffIcon class="h-4 w-4" />
-					{:else}
-						<EyeIcon class="h-4 w-4" />
-					{/if}
-				</button>
-			</div>
+			<PasswordInput
+				id="password"
+				bind:value={password}
+				placeholder="Enter optional password"
+				class="w-full pr-10"
+				name="password"
+				autocomplete="off"
+			/>
 			{#if password}
 				<PasswordStrength {password} />
 			{/if}
