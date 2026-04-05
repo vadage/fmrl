@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Create Dead Drop</title>
+	<title>Create Message</title>
 </svelte:head>
 
 <div class="mx-auto max-w-2xl p-4 pt-8">
@@ -17,7 +17,7 @@
 		<Card.Header>
 			<Card.Title class="flex items-center gap-2 text-lg">
 				<MessageSquareIcon class="h-4 w-4" />
-				Create Dead Drop
+				Create Message
 			</Card.Title>
 			<Card.Description>
 				Your message is fully encrypted in your browser. The server never sees the contents or the

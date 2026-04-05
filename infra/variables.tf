@@ -1,7 +1,8 @@
-variable "cloudflare_account_id" {
-  type = string
+variable "environment" {
+  type = "string"
+  default = "prod"
 }
 
-variable "domain" {
+variable "cloudflare_account_id" {
   type = string
 }

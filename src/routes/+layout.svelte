@@ -46,7 +46,7 @@
 						<li>
 							<Button
 								variant="link"
-								href="https://github.com/vadage/ddrp"
+								href="https://github.com/vadage/fmrl"
 								target="_blank"
 								rel="noopener noreferrer"
 								class="p-0"
@@ -59,14 +59,14 @@
 
 				<div>
 					<h2 class="mb-4 text-lg font-semibold">Actions</h2>
-					<Button href="/">Create Dead Drop</Button>
+					<Button href="/">Create Message</Button>
 				</div>
 			</div>
 
 			<div class="my-8 h-px bg-secondary-foreground/10"></div>
 
 			<div class="text-center text-sm">
-				&copy; {new Date().getFullYear()} ddrp.fyi. All rights reserved.
+				&copy; {new Date().getFullYear()} fmrl.vadage.me. All rights reserved.
 			</div>
 		</div>
 	</footer>

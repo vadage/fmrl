@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "ddrp",
+	"name": "fmrl",
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_flags": ["nodejs_compat"],
 	"compatibility_date": "2025-07-30",
@@ -23,7 +23,7 @@
 	"env": {
 		"production": {
 			"vars": {
-				"PUBLIC_APP_URL": "https://ddrp.fyi"
+				"PUBLIC_APP_URL": "https://fmrl.vadage.me"
 			},
 			"kv_namespaces": [
 				{
@@ -33,7 +33,7 @@
 			],
 			"routes": [
 				{
-					"pattern": "ddrp.fyi",
+					"pattern": "fmrl.vadage.me",
 					"custom_domain": true
 				}
 			]

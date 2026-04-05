@@ -25,7 +25,7 @@
 			<CircleAlertIcon class="size-4" />
 			<Alert.Title>Error</Alert.Title>
 			<Alert.Description>
-				Failed to open dead drop. It might have been opened already or it has expired.
+				Failed to open message. It might have been opened already or it has expired.
 			</Alert.Description>
 		</Alert.Root>
 	{/await}

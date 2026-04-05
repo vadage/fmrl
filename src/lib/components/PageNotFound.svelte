@@ -16,7 +16,7 @@
 			</p>
 
 			<div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
-				<Button href="/">Create Dead Drop</Button>
+				<Button href="/">Create Message</Button>
 			</div>
 		</div>
 	</div>

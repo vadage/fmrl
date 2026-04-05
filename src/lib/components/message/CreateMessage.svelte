@@ -64,7 +64,7 @@
 		<Alert.Root variant="destructive">
 			<CircleAlertIcon class="size-4" />
 			<Alert.Title>Error</Alert.Title>
-			<Alert.Description>Failed to create dead drop. Please try again later.</Alert.Description>
+			<Alert.Description>Failed to create message. Please try again later.</Alert.Description>
 		</Alert.Root>
 	{/await}
 

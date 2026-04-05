@@ -36,7 +36,7 @@
 </script>
 
 <svelte:head>
-	<title>Open Dead Drop</title>
+	<title>Open Message</title>
 </svelte:head>
 
 <div class="mx-auto max-w-2xl p-4 pt-8">
@@ -44,10 +44,10 @@
 		<Card.Header>
 			<Card.Title class="flex items-center gap-2 text-lg">
 				<MessageSquareIcon class="h-4 w-4" />
-				Open Dead Drop
+				Open Message
 			</Card.Title>
 			<Card.Description>
-				The message will be fully decrypted in your browser. After opening the dead drop, this link
+				The message will be fully decrypted in your browser. After opening the message, this link
 				will become invalid for any further use.
 			</Card.Description>
 		</Card.Header>

@@ -33,6 +33,6 @@
 	<Button class="w-full" onclick={copyLink}>Copy To Clipboard</Button>
 	<div class="grid grid-cols-2 gap-x-2">
 		<Button class="w-full" variant="destructive" onclick={revoke}>Revoke</Button>
-		<Button class="w-full" variant="secondary" onclick={reset}>New Dead Drop</Button>
+		<Button class="w-full" variant="secondary" onclick={reset}>New Message</Button>
 	</div>
 </div>

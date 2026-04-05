@@ -1,6 +1,6 @@
-# ddrp
+# fmrl (formerly ddrp)
 
-Simple zero-knowledge dead drop message service running on Cloudflare Workers + KV.
+Simple zero-knowledge ephemeral message service running on Cloudflare Workers + KV.
 
 ## Developing
 
