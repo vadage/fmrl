@@ -24,10 +24,9 @@ jobs:
         run: npm run build
 
       - name: Deploy
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          wranglerVersion: '4.27.0'
           environment: production
           secrets: |
             HMAC_SECRET
