@@ -1,5 +1,5 @@
 import * as v from 'valibot';
-import { command, getRequestEvent, query } from '$app/server';
+import { command, getRequestEvent } from '$app/server';
 import { nanoid } from 'nanoid';
 import { createHmac } from 'node:crypto';
 import { error } from '@sveltejs/kit';
@@ -62,7 +62,7 @@ export const createMessage = command(MessagePayloadValidator, async (data: Messa
 	return { link, id, signature } as ShareableMessage;
 });
 
-export const retrieveMessage = query(SharedMessageValidator, async (data: SharedMessage) => {
+export const retrieveMessage = command(SharedMessageValidator, async (data: SharedMessage) => {
 	const event = getRequestEvent();
 	const { platform } = event;
 	if (!platform) {
