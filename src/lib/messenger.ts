@@ -6,7 +6,7 @@ export async function generateLink(message: string, password: string, ttl: strin
 
 	const passwordExists = !!password;
 	if (!passwordExists) {
-		password = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(16))));
+		password = crypto.randomUUID();
 	}
 
 	const encrypted = await encrypt(enc.encode(message), password);
